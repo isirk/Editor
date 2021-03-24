@@ -33,7 +33,7 @@ class editor extends JFrame implements ActionListener {
         }
   
         // Text component
-        t = new JTextArea();
+        t = new JTextArea("Hello, World!");
   
         // Create a menubar
         JMenuBar mb = new JMenuBar();
