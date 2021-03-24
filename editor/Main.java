@@ -189,7 +189,7 @@ class editor extends JFrame implements ActionListener {
         else if (s.equals("New")) {
             t.setText("");
         }
-        else if (s.equals("close")) {
+        else if (s.equals("❌")) {
             f.setVisible(false);
         }
     }
