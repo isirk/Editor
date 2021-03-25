@@ -217,7 +217,7 @@ class editor extends JFrame implements ActionListener {
         }
 		else if (s.equals("about")) {
 			JOptionPane.showMessageDialog(null, "A simple text editor made by isirk", 
-                "Information", JOptionPane.INFORMATION_MESSAGE, img.getImage());  
+                "About", JOptionPane.INFORMATION_MESSAGE);  
         }
         else if (s.equals("❌")) {
             f.setVisible(false);
@@ -228,5 +228,6 @@ class editor extends JFrame implements ActionListener {
     public static void main(String args[])
     {
         editor e = new editor();
+		System.out.println("Editor Started!");
     }
 }
