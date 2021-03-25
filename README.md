@@ -21,6 +21,11 @@ $ git clone https://github.com/isirk/Editor
 $ java src/Main.java
 ```
 
+## Todo
+- [ ] Make executable
+- [ ] Syntax Highlighting
+- [x] ~~Themes (Dark | Light)~~
+
 &nbsp;
 
 Made with ❤️️ by isirk in java.
