@@ -32,8 +32,8 @@ class editor extends JFrame implements ActionListener {
   
         // Text component
         t = new JTextArea("Hello, World!");
-		t.setBackground(new Color(46, 52, 64));
-		t.setForeground(new Color(136, 192, 208));
+		t.setBackground(new Color(216, 222, 233));
+		t.setForeground(new Color(67, 76, 94));
   
         // Create a menubar
         JMenuBar mb = new JMenuBar();
@@ -74,6 +74,20 @@ class editor extends JFrame implements ActionListener {
         m2.add(mi4);
         m2.add(mi5);
         m2.add(mi6);
+
+		// Create amenu for menu
+        JMenu m3 = new JMenu("Tools");
+  
+        // Create menu items
+        JMenuItem mi7 = new JMenuItem("dark");
+		JMenuItem mi8 = new JMenuItem("light");
+  
+        // Add action listener
+        mi7.addActionListener(this);
+        mi8.addActionListener(this);
+
+		m3.add(mi7);
+        m3.add(mi8);
   
         JMenuItem mc = new JMenuItem("❌");
   
@@ -81,6 +95,7 @@ class editor extends JFrame implements ActionListener {
   
         mb.add(m1);
         mb.add(m2);
+		mb.add(m3);
         mb.add(mc);
   
         f.setJMenuBar(mb);
@@ -188,6 +203,14 @@ class editor extends JFrame implements ActionListener {
         }
         else if (s.equals("New")) {
             t.setText("");
+        }
+		else if (s.equals("dark")) {
+            t.setBackground(new Color(46, 52, 64));
+			t.setForeground(new Color(136, 192, 208));
+        }
+		else if (s.equals("light")) {
+            t.setBackground(new Color(216, 222, 233));
+			t.setForeground(new Color(67, 76, 94));
         }
         else if (s.equals("❌")) {
             f.setVisible(false);
