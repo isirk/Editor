@@ -45,49 +45,52 @@ class editor extends JFrame implements ActionListener {
         JMenuItem mi1 = new JMenuItem("New");
         JMenuItem mi2 = new JMenuItem("Open");
         JMenuItem mi3 = new JMenuItem("Save");
-        JMenuItem mi9 = new JMenuItem("Print");
+        JMenuItem mi4 = new JMenuItem("Print");
   
         // Add action listener
         mi1.addActionListener(this);
         mi2.addActionListener(this);
         mi3.addActionListener(this);
-        mi9.addActionListener(this);
+        mi4.addActionListener(this);
   
         m1.add(mi1);
         m1.add(mi2);
         m1.add(mi3);
-        m1.add(mi9);
+        m1.add(mi4);
   
         // Create amenu for menu
         JMenu m2 = new JMenu("Edit");
   
         // Create menu items
-        JMenuItem mi4 = new JMenuItem("cut");
-        JMenuItem mi5 = new JMenuItem("copy");
-        JMenuItem mi6 = new JMenuItem("paste");
+        JMenuItem mi5 = new JMenuItem("cut");
+        JMenuItem mi6 = new JMenuItem("copy");
+        JMenuItem mi7 = new JMenuItem("paste");
   
         // Add action listener
-        mi4.addActionListener(this);
         mi5.addActionListener(this);
         mi6.addActionListener(this);
+        mi7.addActionListener(this);
   
-        m2.add(mi4);
         m2.add(mi5);
         m2.add(mi6);
+        m2.add(mi7);
 
 		// Create amenu for menu
         JMenu m3 = new JMenu("Tools");
   
         // Create menu items
-        JMenuItem mi7 = new JMenuItem("dark");
-		JMenuItem mi8 = new JMenuItem("light");
+        JMenuItem mi8 = new JMenuItem("dark");
+		JMenuItem mi9 = new JMenuItem("light");
+		JMenuItem mi10 = new JMenuItem("about");
   
         // Add action listener
-        mi7.addActionListener(this);
         mi8.addActionListener(this);
+        mi9.addActionListener(this);
+		mi10.addActionListener(this);
 
-		m3.add(mi7);
-        m3.add(mi8);
+		m3.add(mi8);
+        m3.add(mi9);
+		m3.add(mi10);
   
         JMenuItem mc = new JMenuItem("❌");
   
@@ -211,6 +214,10 @@ class editor extends JFrame implements ActionListener {
 		else if (s.equals("light")) {
             t.setBackground(new Color(216, 222, 233));
 			t.setForeground(new Color(67, 76, 94));
+        }
+		else if (s.equals("about")) {
+			JOptionPane.showMessageDialog(null, "A simple text editor made by isirk", 
+                "Information", JOptionPane.INFORMATION_MESSAGE, img.getImage());  
         }
         else if (s.equals("❌")) {
             f.setVisible(false);
