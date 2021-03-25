@@ -1,5 +1,3 @@
-package editor;
-
 import java.awt.*;
 import javax.swing.*;
 import java.io.*;
@@ -34,6 +32,8 @@ class editor extends JFrame implements ActionListener {
   
         // Text component
         t = new JTextArea("Hello, World!");
+		t.setBackground(new Color(46, 52, 64));
+		t.setForeground(new Color(136, 192, 208));
   
         // Create a menubar
         JMenuBar mb = new JMenuBar();
@@ -86,7 +86,7 @@ class editor extends JFrame implements ActionListener {
         f.setJMenuBar(mb);
         f.add(t);
         f.setSize(500, 500);
-        f.show();
+		f.setVisible(true);
     }
   
     // If a button is pressed
