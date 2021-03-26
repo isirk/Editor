@@ -32,8 +32,10 @@ class editor extends JFrame implements ActionListener {
   
         // Text component
         t = new JTextArea("Hello, World!");
-		t.setBackground(new Color(216, 222, 233));
-		t.setForeground(new Color(67, 76, 94));
+	t.setTabSize(1);
+	t.setBorder(BorderFactory.createCompoundBorder(t.getBorder(), BorderFactory.createEmptyBorder(5, 5, 5, 5)));
+	t.setBackground(new Color(216, 222, 233));
+	t.setForeground(new Color(67, 76, 94));
   
         // Create a menubar
         JMenuBar mb = new JMenuBar();
@@ -80,17 +82,17 @@ class editor extends JFrame implements ActionListener {
   
         // Create menu items
         JMenuItem mi8 = new JMenuItem("dark");
-		JMenuItem mi9 = new JMenuItem("light");
-		JMenuItem mi10 = new JMenuItem("about");
+	JMenuItem mi9 = new JMenuItem("light");
+	JMenuItem mi10 = new JMenuItem("about");
   
         // Add action listener
         mi8.addActionListener(this);
         mi9.addActionListener(this);
-		mi10.addActionListener(this);
+	mi10.addActionListener(this);
 
-		m3.add(mi8);
+	m3.add(mi8);
         m3.add(mi9);
-		m3.add(mi10);
+	m3.add(mi10);
   
         JMenuItem mc = new JMenuItem("❌");
   
@@ -98,13 +100,13 @@ class editor extends JFrame implements ActionListener {
   
         mb.add(m1);
         mb.add(m2);
-		mb.add(m3);
+	mb.add(m3);
         mb.add(mc);
   
         f.setJMenuBar(mb);
         f.add(t);
         f.setSize(500, 500);
-		f.setVisible(true);
+	f.setVisible(true);
     }
   
     // If a button is pressed
@@ -207,13 +209,15 @@ class editor extends JFrame implements ActionListener {
         else if (s.equals("New")) {
             t.setText("");
         }
-		else if (s.equals("dark")) {
+	else if (s.equals("dark")) {
             t.setBackground(new Color(46, 52, 64));
-			t.setForeground(new Color(136, 192, 208));
+	    	t.setForeground(new Color(136, 192, 208));
+			t.setCaretColor(Color.WHITE);
         }
 		else if (s.equals("light")) {
             t.setBackground(new Color(216, 222, 233));
 			t.setForeground(new Color(67, 76, 94));
+			t.setCaretColor(Color.BLACK);
         }
 		else if (s.equals("about")) {
 			JOptionPane.showMessageDialog(null, "A simple text editor made by isirk", 
